@@ -165,6 +165,11 @@
 				responsive: true,
 				hoverMode: 'index',
 				stacked: false,
+				tooltips: {
+					position: 'nearest',
+					mode: 'index',
+					intersect: false,
+				},
 				scales: {
 					xAxes: [{
 						type: 'time',
@@ -238,7 +243,7 @@
 					label: 'Brightness [ADC]',
 					data: [<?=$data["brightness"]?>],
 					fill: false,
-					yAxisID: 'y-axis-moisture',
+					yAxisID: 'y-axis-brightness',
 					borderColor: window.chartColors.blue,
 					backgroundColor: window.chartColors.blue,
 					borderWidth: 2,
@@ -249,6 +254,11 @@
 				responsive: true,
 				hoverMode: 'index',
 				stacked: false,
+				tooltips: {
+					position: 'nearest',
+					mode: 'index',
+					intersect: false,
+				},
 				scales: {
 					xAxes: [{
 						type: 'time',
@@ -283,6 +293,23 @@
 						ticks: {
 							min: <?=$min["moisture"]?>,
 							max: <?=$max["moisture"]?>
+						}
+					},
+					{
+						type: 'linear',
+						display: true,
+						position: 'right',
+						id: 'y-axis-brightness',
+						scaleLabel: {
+							display: true,
+							labelString: 'ADC'
+						},
+						gridLines: {
+							drawOnChartArea: false,
+						},
+						ticks: {
+							min: <?=$min["brightness"]?>,
+							max: <?=$max["brightness"]?>
 						}
 					}],
 				}
