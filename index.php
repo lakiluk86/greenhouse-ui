@@ -199,7 +199,7 @@
 						id: 'y-axis-temp',
 						scaleLabel: {
 							display: true,
-							labelString: '°C'
+							labelString: 'Temperature [°C]'
 						},
 						ticks: {
 							min: <?=$min["temperature"]?>,
@@ -215,7 +215,7 @@
 						},
 						scaleLabel: {
 							display: true,
-							labelString: '%'
+							labelString: 'Humidity [%]'
 						},
 						ticks: {
 							min: <?=$min["humidity"]?>,
@@ -230,7 +230,7 @@
 			type: 'line',
 			data: {
 				datasets: [{
-					label: 'Moisture [ADC]',
+					label: 'Moisture [1-1024]',
 					data: [<?=$data["moisture"]?>],
 					fill: false,
 					yAxisID: 'y-axis-moisture',
@@ -240,7 +240,7 @@
 					pointRadius: 0
 				},
 				{
-					label: 'Brightness [ADC]',
+					label: 'Brightness [1-1024]',
 					data: [<?=$data["brightness"]?>],
 					fill: false,
 					yAxisID: 'y-axis-brightness',
@@ -288,7 +288,7 @@
 						id: 'y-axis-moisture',
 						scaleLabel: {
 							display: true,
-							labelString: 'ADC'
+							labelString: 'Moisture [1-1024]'
 						},
 						ticks: {
 							min: <?=$min["moisture"]?>,
@@ -302,7 +302,7 @@
 						id: 'y-axis-brightness',
 						scaleLabel: {
 							display: true,
-							labelString: 'ADC'
+							labelString: 'Brightness [1-1024]'
 						},
 						gridLines: {
 							drawOnChartArea: false,
